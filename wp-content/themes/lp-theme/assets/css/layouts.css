@@ -80,6 +80,16 @@
     background: var(--color-soft-muted);
 }
 
+/* Довгий рекламний текст у меню показуємо як коротку назву розділу. */
+.main-nav__link[href*="/love-tarot-readings/"] {
+    font-size: 0;
+    white-space: nowrap;
+}
+.main-nav__link[href*="/love-tarot-readings/"]::after {
+    content: "Love Tarot";
+    font-size: 0.875rem;
+}
+
 .header-cta {
     display: flex;
     align-items: center;
