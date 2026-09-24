@@ -1,0 +1,11 @@
+.lp-quiz-modal[hidden]{display:none}
+.lp-quiz-modal{position:fixed;inset:0;z-index:100000;display:grid;place-items:center;padding:20px}
+.lp-quiz-modal__backdrop{position:absolute;inset:0;background:rgba(35,19,31,.66);backdrop-filter:blur(3px)}
+.lp-quiz-modal__dialog{position:relative;width:min(100%,520px);padding:clamp(28px,6vw,48px);border:1px solid var(--color-border,#eadde4);border-radius:var(--radius-lg,18px);background:#fff;text-align:center;box-shadow:0 24px 80px rgba(25,10,20,.28)}
+.lp-quiz-modal__dialog h2{margin:22px 0 12px;color:var(--color-secondary);font-family:var(--font-heading,Georgia,serif);font-size:clamp(28px,5vw,38px)}
+.lp-quiz-modal__dialog>p{color:var(--color-text-light);line-height:1.65}
+.lp-quiz-modal__close{position:absolute;top:12px;right:16px;border:0;background:transparent;color:var(--color-text-muted);font-size:30px;cursor:pointer}
+.lp-quiz-modal-open{overflow:hidden}
+.lp-quiz-modal__actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:26px}
+.lp-quiz-modal__note{margin:22px 0 0;font-size:12px!important}
+@media(max-width:480px){.lp-quiz-modal__actions{flex-direction:column}.lp-quiz-modal__actions>*{width:100%;justify-content:center}}
