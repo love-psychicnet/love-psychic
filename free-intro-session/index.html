@@ -134,7 +134,7 @@ h4 {
 <li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="https://love-psychic.net/blog/">Blog</a></li>
 <li id="menu-item-79" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79"><a href="https://love-psychic.net/about/">About Us</a></li>
 <li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="https://love-psychic.net/love-compatibility/">Love compatibility</a></li>
-<li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116"><a href="https://love-psychic.net/love-tarot-readings/">Make room for the truth your heart is circling</a></li>
+<li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116"><a href="https://love-psychic.net/love-tarot-readings/">Love Tarot</a></li>
 </ul>        </nav>
 
 
@@ -191,33 +191,41 @@ h4 {
                 </div>
             </div>
 
-            <div class="booking-form" style="text-align:center; align-self:start;">
-                <h3 style="color: var(--color-secondary); margin-bottom: var(--spacing-md);">Ready for a Personal Love Reading?</h3>
-                <p style="color: var(--color-text-light); margin-bottom: var(--spacing-xl);">Start with a short mini quiz, then continue to our reading partner.</p>
-                <button type="button" class="btn btn--primary" data-lp-quiz-open style="width:100%; justify-content:center;">Start the Mini Quiz</button>
-                <p style="margin-top:var(--spacing-md);font-size:var(--text-xs);color:var(--color-text-muted);">You’ll continue to an external partner to begin.</p>
+            <div class="booking-form">
+                <h3 style="color: var(--color-secondary); margin-bottom: var(--spacing-xl); text-align: center;">Request Your Free Reading</h3>
+                <form>
+                    <div class="form-group">
+                        <label class="form-label" for="name">Your Name</label>
+                        <input type="text" class="form-input" id="name" placeholder="Enter your first name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email Address</label>
+                        <input type="email" class="form-input" id="email" placeholder="Where we'll send your reading" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="reading-type">Reading Type</label>
+                        <select class="form-select" id="reading-type">
+                            <option value="">Choose your reading...</option>
+                            <option value="soulmate">Soulmate Reading</option>
+                            <option value="compatibility">Compatibility Reading</option>
+                            <option value="future">Future Romance</option>
+                            <option value="twin-flame">Twin Flame</option>
+                            <option value="healing">Breakup Healing</option>
+                            <option value="self-love">Self-Love Journey</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="question">Your Love Question</label>
+                        <textarea class="form-textarea" id="question" placeholder="What would you like to know about your love life?" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> Get My Free Reading</button>
+                    <p style="text-align: center; margin-top: var(--spacing-md); font-size: var(--text-xs); color: var(--color-text-muted);">By submitting, you agree to our <a href="https://love-psychic.net/privacy-policy/">Privacy Policy</a>. We'll never share your information.</p>
+                </form>
             </div>
         </div>
     </div>
 </section>
 
-
-<div class="lp-quiz-modal" data-lp-quiz-modal hidden>
-    <div class="lp-quiz-modal__backdrop" data-lp-quiz-close></div>
-    <section class="lp-quiz-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="lp-quiz-title" aria-describedby="lp-quiz-description" tabindex="-1">
-        <button class="lp-quiz-modal__close" type="button" aria-label="Close" data-lp-quiz-close>&times;</button>
-        <span class="badge badge--gold">A moment for clarity</span>
-        <h2 id="lp-quiz-title">Are you ready for a mini quiz?</h2>
-        <p id="lp-quiz-description">Answer a few quick questions to get started with your love reading.</p>
-        <div class="lp-quiz-modal__actions">
-            <a class="btn btn--primary" href="https://love-psychic.net/go/" rel="nofollow sponsored">Yes, let’s begin</a>
-            <button class="btn btn--ghost" type="button" data-lp-quiz-close>Maybe later</button>
-        </div>
-        <p class="lp-quiz-modal__note">You’ll continue to an external partner. This site does not collect your name, email or quiz answers.</p>
-    </section>
-</div>
-<link rel="stylesheet" href="https://love-psychic.net/wp-content/themes/lp-theme/assets/lp-mini-quiz.css">
-<script src="https://love-psychic.net/wp-content/themes/lp-theme/assets/lp-mini-quiz.js" defer></script>
 
 <section class="section section--alt" id="testimonials">
     <div class="container">
