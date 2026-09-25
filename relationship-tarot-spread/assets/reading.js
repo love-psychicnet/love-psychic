@@ -131,6 +131,10 @@
     cards.replaceChildren(...pool.slice(0, 3).map((card, index) => makeCard(card, index, context.questions[index])));
     document.querySelector('#result-title').textContent = context.title;
     document.querySelector('#result-intro').textContent = 'Turn each card to see its artwork and reflection prompt. The positions describe your experience and the pattern you notice.';
+    const personalQuestion = document.querySelector('#heart-question').value.trim();
+    const questionDisplay = document.querySelector('#user-question');
+    questionDisplay.textContent = personalQuestion ? `Your question: ${personalQuestion}` : '';
+    questionDisplay.hidden = !personalQuestion;
     document.querySelector('#next-step').textContent = context.next;
     result.hidden = false;
     status.textContent = 'Three cards drawn face down. Reveal each card.';
