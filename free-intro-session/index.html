@@ -202,49 +202,112 @@ h4 {
 </aside>
 </div></div></section>
 <dialog class="reading-dialog" id="reading-form-dialog" aria-labelledby="reading-form-title"><div class="reading-dialog__inner">
-<button type="button" class="reading-dialog__close" id="close-reading-form" aria-label="Close form">&times;</button>
-<div class="booking-form">
-                <h2 id="reading-form-title" style="color: var(--color-secondary); margin-bottom: var(--spacing-xl); text-align: center;">Request Your Free Reading</h2>
-                <form>
-                    <div class="form-group">
-                        <label class="form-label" for="name">Your Name</label>
-                        <input type="text" class="form-input" id="name" placeholder="Enter your first name" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="email">Email Address</label>
-                        <input type="email" class="form-input" id="email" placeholder="Where we'll send your reading" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="reading-type">Reading Type</label>
-                        <select class="form-select" id="reading-type">
-                            <option value="">Choose your reading...</option>
-                            <option value="soulmate">Soulmate Reading</option>
-                            <option value="compatibility">Compatibility Reading</option>
-                            <option value="future">Future Romance</option>
-                            <option value="twin-flame">Twin Flame</option>
-                            <option value="healing">Breakup Healing</option>
-                            <option value="self-love">Self-Love Journey</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="question">Your Love Question</label>
-                        <textarea class="form-textarea" id="question" placeholder="What would you like to know about your love life?" rows="4"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> Get My Free Reading</button>
-                    <p style="text-align: center; margin-top: var(--spacing-md); font-size: var(--text-xs); color: var(--color-text-muted);">By submitting, you agree to our <a href="https://love-psychic.net/privacy-policy/">Privacy Policy</a>. We'll never share your information.</p>
-                </form>
-            </div>
+<button type="button" class="reading-dialog__close" id="close-reading-form" aria-label="Close quiz">&times;</button>
+<div class="booking-form lpq" id="lpq">
+<div class="lpq__screen" data-lpq-screen="intro">
+<span class="lpq__eyebrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> Mini love quiz</span>
+<h2 id="reading-form-title" class="lpq__title">Ready to take a mini quiz?</h2>
+<p class="lpq__lead">Four quick questions about your heart. It takes under a minute, and there is nothing to type.</p>
+<button type="button" class="btn btn--primary lpq__cta" data-lpq-start><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> Start the quiz</button>
+<p class="lpq__note">No sign-up &middot; No personal details</p>
+</div>
+<div class="lpq__screen" data-lpq-screen="question" hidden>
+<div class="lpq__progress"><div class="lpq__bar" aria-hidden="true"><span data-lpq-fill></span></div><span class="lpq__step" data-lpq-step aria-live="polite">Question 1 of 4</span></div>
+<h3 class="lpq__q" data-lpq-q tabindex="-1"></h3>
+<div class="lpq__opts" data-lpq-opts role="group"></div>
+<button type="button" class="lpq__back" data-lpq-back>&larr; Back</button>
+</div>
+<div class="lpq__screen" data-lpq-screen="result" hidden>
+<span class="lpq__eyebrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> Your result</span>
+<h3 class="lpq__rtitle" data-lpq-rtitle tabindex="-1"></h3>
+<p class="lpq__lead" data-lpq-rtext></p>
+<p class="lpq__lead lpq__lead--sub" data-lpq-rsub></p>
+<a class="btn btn--primary lpq__cta" href="https://love-psychic.net/go/" rel="nofollow sponsored"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> Get My Free Reading</a>
+<button type="button" class="lpq__back lpq__back--center" data-lpq-restart>Retake the quiz</button>
+</div>
+</div>
 </div></dialog>
+<style>
+.lpq{padding-top:clamp(3rem,6vw,3.5rem);text-align:center}
+.lpq [hidden]{display:none!important}
+.lpq__eyebrow{display:inline-flex;align-items:center;gap:.4rem;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--color-primary);font-weight:600;margin-bottom:.75rem}
+.lpq__eyebrow svg{width:16px;height:16px}
+.lpq__title,.lpq__rtitle{font-family:var(--font-heading);color:var(--color-secondary);font-size:clamp(1.9rem,5vw,2.5rem);line-height:1.15;margin:0 0 1rem;outline:0}
+.lpq__rtitle{font-size:clamp(1.7rem,4.5vw,2.2rem)}
+.lpq__lead{color:var(--color-text-light);line-height:1.65;margin:0 auto 1.5rem;max-width:30rem}
+.lpq__lead--sub{margin-top:-.5rem;font-style:italic}
+.lpq__cta{width:100%;max-width:22rem;justify-content:center;margin:0 auto}
+.lpq__note{margin:1rem 0 0;font-size:var(--text-xs,.8rem);color:var(--color-text-muted)}
+.lpq__progress{display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem}
+.lpq__bar{flex:1;height:6px;border-radius:9999px;background:var(--color-soft);overflow:hidden}
+.lpq__bar span{display:block;height:100%;width:0;background:var(--color-primary);border-radius:9999px;transition:width .3s ease}
+.lpq__step{font-size:.8rem;color:var(--color-text-muted);white-space:nowrap}
+.lpq__q{font-family:var(--font-heading);color:var(--color-secondary);font-size:clamp(1.5rem,4.5vw,1.9rem);line-height:1.25;margin:0 0 1.25rem;outline:0}
+.lpq__opts{display:grid;gap:.65rem;margin-bottom:1.25rem}
+.lpq__opt{display:block;width:100%;min-height:3rem;padding:.8rem 1rem;text-align:left;font:inherit;font-size:.95rem;color:var(--color-text);background:var(--color-bg-card,#fff);border:1.5px solid var(--color-border);border-radius:var(--radius-md);cursor:pointer;transition:border-color .15s,background .15s}
+.lpq__opt:hover,.lpq__opt:focus-visible{border-color:var(--color-primary);background:var(--color-soft-muted);outline:0}
+.lpq__opt.is-selected{border-color:var(--color-primary);background:var(--color-soft);color:var(--color-primary-dark);font-weight:500}
+.lpq__back{background:none;border:0;padding:.5rem;font:inherit;font-size:.9rem;color:var(--color-text-light);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.lpq__back:hover,.lpq__back:focus-visible{color:var(--color-primary)}
+.lpq__back--center{display:block;margin:1rem auto 0}
+@media (prefers-reduced-motion:reduce){.lpq__bar span,.lpq__opt{transition:none}}
+@media (max-width:480px){.lpq{padding-top:3.25rem}.lpq__opt{font-size:.92rem}}
+</style>
 <script>
-document.addEventListener('DOMContentLoaded', function () {
- const dialog=document.getElementById('reading-form-dialog');
- const openButton=document.getElementById('open-reading-form');
- const closeButton=document.getElementById('close-reading-form');
- if (!dialog || !openButton || !closeButton) return;
- openButton.addEventListener('click', function () { dialog.showModal(); });
- closeButton.addEventListener('click', function () { dialog.close(); });
- dialog.addEventListener('click', function (event) { if (event.target === dialog) dialog.close(); });
-});
+(function(){
+var dlg=document.getElementById('reading-form-dialog'),openBtn=document.getElementById('open-reading-form'),closeBtn=document.getElementById('close-reading-form'),root=document.getElementById('lpq');
+if(!dlg||!openBtn||!closeBtn||!root)return;
+var Q=[
+{t:'What brings you here today?',o:['A relationship I am in now','Someone new in my life','Healing after a breakup','Finding love for myself']},
+{t:'When it comes to love, you tend to\u2026',o:['Follow my heart','Think everything through','Wait for a sign','Hold back to stay safe']},
+{t:'What do you most want clarity on?',o:['Their true feelings','Where we are heading','Whether to let go','How to open up again']},
+{t:'How does your heart feel right now?',o:['Hopeful','Uncertain','A little hurt','Ready for change']}
+];
+var R=[
+{h:'Your heart is invested in a real connection',p:'Your answers point to a bond that matters to you, and you want to understand it more deeply before taking the next step.'},
+{h:'A new chapter is stirring',p:'Your answers suggest fresh romantic energy is entering your life, and you are curious how to meet it with confidence.'},
+{h:'You are in a season of healing',p:'Your answers show a heart that is ready to mend and move forward, with room for something kinder ahead.'},
+{h:'Your love story begins with you',p:'Your answers reveal someone turning inward first, building the self-trust that makes every future connection stronger.'}
+];
+var M=['Your hopeful outlook is a real strength, so use it well.','That uncertainty is a sign you care, and it is exactly where fresh perspective helps most.','Tenderness is not weakness, and gentle guidance can help the hurt soften.','Your readiness for change is powerful, and the timing may be on your side.'];
+var C=['their true feelings','where things are heading','whether it is time to let go','opening your heart again'];
+var ans=[],cur=0,sc={};
+[].forEach.call(root.querySelectorAll('[data-lpq-screen]'),function(e){sc[e.getAttribute('data-lpq-screen')]=e});
+function q(s){return root.querySelector(s)}
+function show(n){for(var k in sc)sc[k].hidden=(k!==n)}
+function render(){
+ var d=Q[cur],h=q('[data-lpq-q]'),box=q('[data-lpq-opts]');
+ q('[data-lpq-step]').textContent='Question '+(cur+1)+' of '+Q.length;
+ q('[data-lpq-fill]').style.width=((cur+1)/Q.length*100)+'%';
+ h.textContent=d.t;box.innerHTML='';box.setAttribute('aria-label',d.t);
+ d.o.forEach(function(label,i){
+  var b=document.createElement('button');
+  b.type='button';b.className='lpq__opt'+(ans[cur]===i?' is-selected':'');b.textContent=label;b.setAttribute('aria-pressed',ans[cur]===i?'true':'false');
+  b.addEventListener('click',function(){
+   ans[cur]=i;
+   [].forEach.call(box.children,function(c,j){c.classList.toggle('is-selected',j===i);c.setAttribute('aria-pressed',j===i?'true':'false')});
+   setTimeout(next,220);
+  });
+  box.appendChild(b);
+ });
+ show('question');h.focus();
+}
+function next(){if(cur<Q.length-1){cur++;render()}else result()}
+function result(){
+ var r=R[ans[0]];
+ q('[data-lpq-rtitle]').textContent=r.h;
+ q('[data-lpq-rtext]').textContent=r.p;
+ q('[data-lpq-rsub]').textContent='You are seeking clarity on '+C[ans[2]]+'. '+M[ans[3]];
+ show('result');q('[data-lpq-rtitle]').focus();
+}
+function reset(){ans=[];cur=0;show('intro')}
+q('[data-lpq-start]').addEventListener('click',function(){cur=0;render()});
+q('[data-lpq-back]').addEventListener('click',function(){if(cur>0){cur--;render()}else reset()});
+q('[data-lpq-restart]').addEventListener('click',reset);
+openBtn.addEventListener('click',function(){reset();dlg.showModal()});
+closeBtn.addEventListener('click',function(){dlg.close()});
+dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
+})();
 </script>
 
 
