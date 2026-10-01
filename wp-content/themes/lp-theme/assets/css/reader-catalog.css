@@ -29,3 +29,4 @@
 .reader-empty{display:none;padding:28px;background:#fff7f8;border-radius:12px}
 @media(max-width:700px){.reader-profile{grid-template-columns:1fr}.reader-profile__image{max-width:420px}.reader-count{width:100%;margin-left:0}.reader-card img{height:340px}}
 @media print{.reader-toolbar,.reader-actions{display:none}.reader-card{break-inside:avoid}}
+@media(max-width:700px){html,body{max-width:100%;overflow-x:clip}.footer-bottom__links{flex-wrap:wrap;max-width:100%;justify-content:flex-start}.footer-bottom__links li,.footer-bottom__links a{max-width:100%;overflow-wrap:anywhere}}
