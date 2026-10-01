@@ -59,7 +59,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&#038;family=Poppins:wght@300;400;500;600;700&#038;display=swap" /></noscript>
 <link rel='stylesheet' id='lp-tokens-css' href='https://love-psychic.net/wp-content/themes/lp-theme/assets/css/tokens.css?ver=2.3.0' media='all' />
 <link rel='stylesheet' id='lp-components-css' href='https://love-psychic.net/wp-content/themes/lp-theme/assets/css/components.css?ver=2.3.0' media='all' />
-<link rel='stylesheet' id='lp-layouts-css' href='https://love-psychic.net/wp-content/themes/lp-theme/assets/css/layouts.css?ver=2.3.0' media='all' />
+<link rel='stylesheet' id='lp-layouts-css' href='https://love-psychic.net/wp-content/themes/lp-theme/assets/css/layouts.css?ver=2.3.1' media='all' />
 <link rel='stylesheet' id='lp-style-css' href='https://love-psychic.net/wp-content/themes/lp-theme/style.css?ver=2.3.0' media='all' />
 <link rel="canonical" href="https://love-psychic.net/free-intro-session/" />
 <link rel="icon" href="https://love-psychic.net/wp-content/uploads/2026/03/site_3_favicon-150x150.png" sizes="32x32" />
@@ -191,8 +191,18 @@ h4 {
                 </div>
             </div>
 
-            <div class="booking-form">
-                <h3 style="color: var(--color-secondary); margin-bottom: var(--spacing-xl); text-align: center;">Request Your Free Reading</h3>
+            <aside class="booking-cta" aria-labelledby="booking-cta-title">
+<span class="booking-cta__eyebrow">✦ Your first step starts here</span>
+<h2 id="booking-cta-title">A little clarity can change everything</h2>
+<p>Share your love question and take the first step toward a more confident heart.</p>
+<button type="button" class="btn btn--primary btn--lg booking-cta__button" id="open-reading-form" aria-haspopup="dialog" aria-controls="reading-form-dialog"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> Get My Free Reading</button>
+<span class="booking-cta__note">Free 10-minute intro session · Private and confidential</span>
+</aside>
+</div></div></section>
+<dialog class="reading-dialog" id="reading-form-dialog" aria-labelledby="reading-form-title"><div class="reading-dialog__inner">
+<button type="button" class="reading-dialog__close" id="close-reading-form" aria-label="Close form">&times;</button>
+<div class="booking-form">
+                <h2 id="reading-form-title" style="color: var(--color-secondary); margin-bottom: var(--spacing-xl); text-align: center;">Request Your Free Reading</h2>
                 <form>
                     <div class="form-group">
                         <label class="form-label" for="name">Your Name</label>
@@ -222,9 +232,18 @@ h4 {
                     <p style="text-align: center; margin-top: var(--spacing-md); font-size: var(--text-xs); color: var(--color-text-muted);">By submitting, you agree to our <a href="https://love-psychic.net/privacy-policy/">Privacy Policy</a>. We'll never share your information.</p>
                 </form>
             </div>
-        </div>
-    </div>
-</section>
+</div></dialog>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+ const dialog=document.getElementById('reading-form-dialog');
+ const openButton=document.getElementById('open-reading-form');
+ const closeButton=document.getElementById('close-reading-form');
+ if (!dialog || !openButton || !closeButton) return;
+ openButton.addEventListener('click', function () { dialog.showModal(); });
+ closeButton.addEventListener('click', function () { dialog.close(); });
+ dialog.addEventListener('click', function (event) { if (event.target === dialog) dialog.close(); });
+});
+</script>
 
 
 <section class="section section--alt" id="testimonials">
