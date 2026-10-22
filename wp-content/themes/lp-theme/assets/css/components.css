@@ -1,0 +1,598 @@
+/* ==========================================================================
+   RESET & BASE
+   ========================================================================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--leading-normal);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--color-primary); text-decoration: none; transition: color var(--transition-fast); }
+a:hover { color: var(--color-primary-light); }
+
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--leading-tight);
+    color: var(--color-secondary);
+}
+
+h1 { font-size: var(--text-5xl); margin-bottom: var(--spacing-lg); }
+h2 { font-size: var(--text-4xl); margin-bottom: var(--spacing-lg); }
+h3 { font-size: var(--text-2xl); margin-bottom: var(--spacing-md); }
+h4 { font-size: var(--text-xl); margin-bottom: var(--spacing-sm); }
+
+p { margin-bottom: var(--spacing-md); color: var(--color-text-light); }
+p:last-child { margin-bottom: 0; }
+
+.section-label {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-sm);
+}
+
+.section-title {
+    font-size: var(--text-4xl);
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-md);
+}
+
+.section-subtitle {
+    font-size: var(--text-lg);
+    color: var(--color-text-light);
+    max-width: 600px;
+}
+
+.text-center { text-align: center; }
+.text-center .section-subtitle { margin-left: auto; margin-right: auto; }
+
+/* ==========================================================================
+   CONTAINER
+   ========================================================================== */
+.container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.container--narrow { max-width: var(--container-narrow); }
+.container--wide { max-width: var(--container-wide); }
+
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1;
+    padding: 0.875rem 2rem;
+    border: 2px solid transparent;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.btn--primary {
+    background: var(--color-accent);
+    color: var(--color-secondary);
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-gold);
+}
+.btn--primary:hover {
+    background: var(--color-accent-light);
+    border-color: var(--color-accent-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(212, 168, 67, 0.4);
+    color: var(--color-secondary);
+}
+
+.btn--secondary {
+    background: transparent;
+    color: var(--color-text-on-dark);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+.btn--secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.7);
+    color: var(--color-text-on-dark);
+}
+
+.btn--outline {
+    background: transparent;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+.btn--outline:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn--ghost {
+    background: transparent;
+    color: var(--color-accent);
+    border-color: transparent;
+    padding: 0.5rem 1rem;
+}
+.btn--ghost:hover { color: var(--color-accent-dark); }
+.btn--ghost .arrow { transition: transform var(--transition); }
+.btn--ghost:hover .arrow { transform: translateX(4px); }
+
+.btn--sm { font-size: var(--text-sm); padding: 0.625rem 1.5rem; }
+.btn--lg { font-size: var(--text-lg); padding: 1.125rem 2.75rem; }
+
+/* ==========================================================================
+   CARDS
+   ========================================================================== */
+.card {
+    background: var(--color-bg-card);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-2xl);
+    box-shadow: var(--shadow-xs);
+    border: 1px solid var(--color-border);
+    transition: all var(--transition);
+}
+.card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+    border-color: rgba(154, 54, 95, 0.24);
+}
+
+.card__icon {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-lg);
+    background: var(--color-soft-muted);
+    color: var(--color-primary);
+}
+
+.card__title {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.card__text {
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
+    line-height: var(--leading-relaxed);
+}
+
+.card--reading {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 100%;
+}
+.card--reading::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent), var(--color-teal));
+    opacity: 1;
+    transition: opacity var(--transition);
+}
+.card--reading:hover::before { opacity: 1; }
+
+.card--reading .card__icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto var(--spacing-lg);
+    border-radius: var(--radius-md);
+    font-size: 2rem;
+    background: linear-gradient(135deg, var(--color-soft) 0%, var(--color-soft-muted) 100%);
+}
+
+.card--linked {
+    color: inherit;
+    display: block;
+    position: relative;
+    text-decoration: none;
+}
+
+.card__flag {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    font-size: var(--text-xs);
+    background: var(--color-secondary);
+    color: white;
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: var(--font-weight-semibold);
+}
+
+.card__link-text {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-md);
+    color: var(--color-primary);
+    font-weight: var(--font-weight-semibold);
+}
+
+/* ==========================================================================
+   PSYCHIC PROFILE CARD
+   ========================================================================== */
+.psychic-card {
+    background: var(--color-bg-card);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-xs);
+    border: 1px solid var(--color-border);
+    transition: all var(--transition);
+}
+.psychic-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+}
+
+.psychic-card__image {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+}
+
+.psychic-card__body { padding: var(--spacing-xl); }
+
+.psychic-card__name {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.psychic-card__role {
+    font-size: var(--text-sm);
+    color: var(--color-primary);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--spacing-md);
+}
+
+.psychic-card__stars {
+    color: var(--color-star);
+    font-size: var(--text-sm);
+    margin-bottom: var(--spacing-md);
+    letter-spacing: 2px;
+}
+
+.psychic-card__stars span {
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+    letter-spacing: 0;
+}
+
+.psychic-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.psychic-card__tag {
+    font-size: var(--text-xs);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-full);
+    background: var(--color-soft-muted);
+    color: var(--color-primary-dark);
+    font-weight: var(--font-weight-medium);
+}
+
+/* ==========================================================================
+   TESTIMONIAL
+   ========================================================================== */
+.testimonial {
+    background: var(--color-bg-card);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-2xl);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border-light);
+    position: relative;
+}
+.testimonial::before {
+    content: '\201C';
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    color: var(--color-soft);
+    position: absolute;
+    top: 0.5rem;
+    left: 1.25rem;
+    line-height: 1;
+}
+
+.testimonial__text {
+    font-size: var(--text-base);
+    font-style: italic;
+    color: var(--color-text);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--spacing-lg);
+}
+
+.testimonial__author {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.testimonial__avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--text-sm);
+}
+
+.testimonial__name {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-secondary);
+    font-size: var(--text-sm);
+}
+
+.testimonial__meta {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   FAQ ACCORDION
+   ========================================================================== */
+.faq-item {
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+.faq-item__question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-lg) 0;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-secondary);
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    transition: color var(--transition-fast);
+}
+.faq-item__question:hover { color: var(--color-primary); }
+
+.faq-item__icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: var(--radius-full);
+    background: var(--color-soft-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-lg);
+    color: var(--color-primary);
+    transition: all var(--transition);
+}
+.faq-item.active .faq-item__icon {
+    background: var(--color-primary);
+    color: white;
+    transform: rotate(45deg);
+}
+
+.faq-item__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-slow), padding var(--transition-slow);
+}
+.faq-item.active .faq-item__answer {
+    max-height: 500px;
+    padding-bottom: var(--spacing-lg);
+}
+
+.faq-item__answer p {
+    font-size: var(--text-base);
+    color: var(--color-text-light);
+    line-height: var(--leading-relaxed);
+}
+
+/* ==========================================================================
+   TRUST BAR
+   ========================================================================== */
+.trust-bar {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-2xl);
+    flex-wrap: wrap;
+    padding: var(--spacing-xl) 0;
+}
+
+.trust-card {
+    text-align: left;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(255, 245, 241, 0.9));
+}
+
+.trust-bar__item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    font-weight: var(--font-weight-medium);
+}
+
+.trust-bar__icon {
+    font-size: var(--text-xl);
+}
+
+/* ==========================================================================
+   STEP / HOW IT WORKS
+   ========================================================================== */
+.step {
+    text-align: center;
+    position: relative;
+}
+
+.step__number {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-bold);
+    margin: 0 auto var(--spacing-lg);
+    box-shadow: var(--shadow-glow);
+}
+
+.step__title {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.step__text {
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   BADGE / TAG
+   ========================================================================== */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: var(--text-xs);
+    font-weight: var(--font-weight-semibold);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-full);
+    background: var(--color-soft-muted);
+    color: var(--color-primary);
+}
+
+.badge--gold {
+    background: rgba(212, 168, 67, 0.15);
+    color: var(--color-accent-dark);
+}
+
+/* ==========================================================================
+   FORM ELEMENTS
+   ========================================================================== */
+.form-group { margin-bottom: var(--spacing-lg); }
+
+.form-label {
+    display: block;
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--color-text);
+    background: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(139, 34, 82, 0.1);
+}
+
+.form-textarea { min-height: 120px; resize: vertical; }
+
+/* ==========================================================================
+   Page Content Typography (policies, about, etc.)
+   ========================================================================== */
+
+.content-prose h1 { font-size: clamp(1.75rem, 4vw, 2.25rem); }
+.content-prose h2 { font-size: clamp(1.4rem, 3vw, 1.85rem); margin: 2rem 0 0.75rem; }
+.content-prose h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); margin: 1.5rem 0 0.5rem; }
+.content-prose h4 { font-size: 1.15rem; margin: 1.25rem 0 0.5rem; }
+.content-prose ul, .content-prose ol { margin: 0 0 1rem 1.5rem; }
+.content-prose li { margin-bottom: 0.35rem; }
+
+/* Long-form article extras — tables scroll instead of breaking the layout on
+   narrow screens, and blockquotes need a rule (the global reset zeroes them). */
+.content-prose table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    margin: var(--spacing-xl) 0;
+    font-size: var(--text-sm);
+}
+.content-prose th { white-space: nowrap; }
+.content-prose blockquote {
+    margin: var(--spacing-xl) 0;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    border-left: 3px solid var(--color-accent);
+    background: var(--color-soft-muted);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-style: italic;
+    color: var(--color-secondary);
+}
+.content-prose blockquote p { color: inherit; }

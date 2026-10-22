@@ -1,0 +1,10 @@
+{
+  "id": "site-3-love-compatibility",
+  "type": "compatibility",
+  "theme": {"accent":"#b14f72","accentStrong":"#7f3150","soft":"#fff0f5"},
+  "eyebrow": "Love pattern reflection",
+  "title": "Explore a symbolic compatibility pattern",
+  "intro": "Compare zodiac signs and Life Path numbers as conversation starters about a relationship.",
+  "disclaimer": "For entertainment and self-reflection only. Compatibility is not destiny; communication and consent matter more than any score.",
+  "fallback": "Compare values, needs, and boundaries in conversation instead."
+}
