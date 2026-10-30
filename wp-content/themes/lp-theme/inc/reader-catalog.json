@@ -1,0 +1,122 @@
+{
+ "order": [
+  "isabella",
+  "jade",
+  "lucia",
+  "mira"
+ ],
+ "readers": {
+  "isabella": {
+   "name": "Isabella",
+   "card_role": "Gentle relationship reflection",
+   "card_blurb": "A warm, reflective guide for questions about emotional closeness, mixed signals, and the kind of relationship you want to build.",
+   "topics": "soulmates|future love|communication",
+   "tags": [
+    "Soulmates",
+    "Future love",
+    "Communication"
+   ],
+   "title": "Isabella — Gentle relationship reflection | Love Psychic",
+   "meta": "Explore Isabella's illustrative love reading style, questions to ask, approach, and limitations. AI-generated example profile.",
+   "lede": "A warm, reflective guide for questions about emotional closeness, mixed signals, and the kind of relationship you want to build.",
+   "how": "Isabella's example reading style starts with your own experience: what has happened, what you know, and what you hope will change. It then explores possible meanings without claiming to know another person's private thoughts.",
+   "questions": [
+    "What do I need to say clearly in this relationship?",
+    "Which patterns feel familiar to me, and which are new?",
+    "How can I make room for love without ignoring my boundaries?"
+   ],
+   "expect": "Bring one situation and one question. A useful conversation would name the facts, separate them from assumptions, and end with a small action you can choose for yourself.",
+   "note": "<strong>Profile transparency:</strong> Isabella is an illustrative persona, not a verified practitioner. This portrait was generated with AI. No experience, certification, rating, or availability is claimed.",
+   "role": "Gentle relationship reflection",
+   "kicker": "Example reader profile",
+   "img": "psychic-isabella.webp",
+   "img_alt": "AI-generated illustrative portrait for Isabella",
+   "small": "AI-generated illustrative portrait; example persona.",
+   "card_img": "psychic-isabella.webp"
+  },
+  "jade": {
+   "name": "Jade",
+   "card_role": "Direct compatibility perspective",
+   "card_blurb": "A practical, direct style for people deciding whether a relationship fits their values, needs, and plans.",
+   "topics": "compatibility|relationship dynamics|boundaries",
+   "tags": [
+    "Compatibility",
+    "Relationship dynamics",
+    "Boundaries"
+   ],
+   "title": "Jade — Direct compatibility perspective | Love Psychic",
+   "meta": "Explore Jade's illustrative love reading style, questions to ask, approach, and limitations. AI-generated example profile.",
+   "lede": "A practical, direct style for people deciding whether a relationship fits their values, needs, and plans.",
+   "how": "Jade's example profile focuses on observable patterns: communication, follow-through, conflict, and the pace each person wants. It encourages honest questions instead of promising a verdict about a partner.",
+   "questions": [
+    "Are our expectations compatible in everyday life?",
+    "What boundary have I been avoiding?",
+    "Which conversations would help me decide what comes next?"
+   ],
+   "expect": "Set out the decision in front of you and the evidence you already have. The goal is a clearer choice, not a guaranteed prediction.",
+   "note": "<strong>Profile transparency:</strong> Jade is an illustrative persona, not a verified practitioner. This portrait was generated with AI. No experience, certification, rating, or availability is claimed.",
+   "role": "Direct compatibility perspective",
+   "kicker": "Example reader profile",
+   "img": "psychic-jade.webp",
+   "img_alt": "AI-generated illustrative portrait for Jade",
+   "small": "AI-generated illustrative portrait; example persona.",
+   "card_img": "psychic-jade.webp"
+  },
+  "lucia": {
+   "name": "Lucia",
+   "card_role": "Breakup and self-worth reflection",
+   "card_blurb": "A gentle style for processing heartbreak, noticing recurring patterns, and rebuilding trust in your own judgment.",
+   "topics": "breakup healing|self-worth|new beginnings",
+   "tags": [
+    "Breakup healing",
+    "Self-worth",
+    "New beginnings"
+   ],
+   "title": "Lucia — Breakup and self-worth reflection | Love Psychic",
+   "meta": "Explore Lucia's illustrative love reading style, questions to ask, approach, and limitations. AI-generated example profile.",
+   "lede": "A gentle style for processing heartbreak, noticing recurring patterns, and rebuilding trust in your own judgment.",
+   "how": "Lucia's example profile makes space for grief without claiming to treat it. The conversation can explore what the relationship meant, what you miss, and what support or boundaries may help you move forward.",
+   "questions": [
+    "What am I grieving beyond the relationship itself?",
+    "What helps me feel safe and grounded today?",
+    "How can I notice red flags without closing myself off?"
+   ],
+   "expect": "Expect a reflective conversation and practical prompts for journaling or discussion. For persistent distress, seek a licensed mental health professional.",
+   "note": "<strong>Profile transparency:</strong> Lucia is an illustrative persona, not a verified practitioner. This portrait was generated with AI. No experience, certification, rating, or availability is claimed.",
+   "role": "Breakup and self-worth reflection",
+   "kicker": "Example reader profile",
+   "img": "psychic-lucia.webp",
+   "img_alt": "AI-generated illustrative portrait for Lucia",
+   "small": "AI-generated illustrative portrait; example persona.",
+   "card_img": "psychic-lucia.webp"
+  },
+  "mira": {
+   "name": "Mira",
+   "card_role": "Soul-connection reflection",
+   "card_blurb": "A thoughtful style for intense connections that feel meaningful, confusing, or hard to leave behind.",
+   "topics": "soulmates|twin flames|recurring patterns",
+   "tags": [
+    "Soulmates",
+    "Twin flames",
+    "Recurring patterns"
+   ],
+   "title": "Mira — Soul-connection reflection | Love Psychic",
+   "meta": "Explore Mira's illustrative love reading style, questions to ask, approach, and limitations. AI-generated example profile.",
+   "lede": "A thoughtful style for intense connections that feel meaningful, confusing, or hard to leave behind.",
+   "how": "Mira's example profile uses spiritual language as a way to reflect on a relationship, while keeping your agency central. A strong feeling of destiny cannot establish what another person will do or whether a relationship is healthy.",
+   "questions": [
+    "What does this connection bring out in me?",
+    "Is the relationship reciprocal in practice?",
+    "What would I choose if I stopped waiting for a sign?"
+   ],
+   "expect": "Explore the meaning you give to the connection, then return to observable behavior, mutual consent, and your own wellbeing.",
+   "note": "<strong>Profile transparency:</strong> Mira is an illustrative persona, not a verified practitioner. This portrait was generated with AI. No experience, certification, rating, or availability is claimed.",
+   "role": "Soul-connection reflection",
+   "kicker": "Example reader profile",
+   "img": "psychic-mira-editorial.webp",
+   "img_alt": "AI-generated illustrative portrait for Mira",
+   "small": "AI-generated illustrative portrait; example persona.",
+   "card_img": "psychic-mira-editorial.webp"
+  }
+ }
+}
